@@ -1,0 +1,23 @@
+-r requirements.txt
+
+# Linting + formatting
+ruff>=0.4.4
+
+# Type checking
+mypy>=1.10.0
+types-requests
+types-python-dateutil
+
+# Security
+bandit>=1.7.8
+
+# Dead code
+vulture>=2.11
+
+# Commit gates
+pre-commit>=3.7.0
+
+# Testing
+pytest>=8.2.0
+pytest-asyncio>=0.23.0
+pytest-cov>=5.0.0

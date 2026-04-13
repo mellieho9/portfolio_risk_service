@@ -1,0 +1,33 @@
+# AI slop / generated artifacts
+*.ipynb
+*.md
+
+# Secrets
+.env
+
+# Model artifacts (pulled from S3 at runtime)
+models/
+*.pt
+*.pkl
+
+# Local DB cache
+market_cache.duckdb
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Tool caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# OS
+.DS_Store
