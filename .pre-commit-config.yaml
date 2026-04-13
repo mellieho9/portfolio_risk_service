@@ -31,6 +31,21 @@ repos:
       - id: vulture
         args: [app/, training/, --min-confidence, "80"]
 
+  # eradicate: remove commented-out dead code
+  - repo: https://github.com/wemake-services/eradicate
+    rev: 2.3.0
+    hooks:
+      - id: eradicate
+
+  # Comment density: fail if > 20% of lines are # comments
+  - repo: local
+    hooks:
+      - id: check-comments
+        name: comment density
+        entry: python scripts/check_comments.py
+        language: python
+        types: [python]
+
   # General hygiene
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0

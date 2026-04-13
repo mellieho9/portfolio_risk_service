@@ -1,4 +1,4 @@
-.PHONY: fmt lint typecheck security deadcode check install test
+.PHONY: fmt lint typecheck security deadcode comments check install test
 
 install:
 	pip install -r requirements-dev.txt
@@ -19,7 +19,10 @@ security:
 deadcode:
 	vulture app/ training/ --min-confidence 80
 
-check: lint typecheck security deadcode
+comments:
+	python scripts/check_comments.py $$(find app/ training/ -name "*.py")
+
+check: lint typecheck security deadcode comments
 
 test:
 	pytest tests/ -v

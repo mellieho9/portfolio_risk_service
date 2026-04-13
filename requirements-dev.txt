@@ -14,6 +14,9 @@ bandit>=1.7.8
 # Dead code
 vulture>=2.11
 
+# Commented-out code removal
+eradicate>=2.3.0
+
 # Commit gates
 pre-commit>=3.7.0
 
