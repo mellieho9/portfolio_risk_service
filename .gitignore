@@ -1,6 +1,8 @@
 # AI slop / generated artifacts
 *.ipynb
+!training/assess_phase2.ipynb
 *.md
+!*.md
 
 # Secrets
 .env
